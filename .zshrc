@@ -6,7 +6,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
-plugins=(git nvm alias-finder aliases git-prompt zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git nvm alias-finder aliases git-prompt zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 # The following lines were added by compinstall
