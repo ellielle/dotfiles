@@ -36,3 +36,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Turso
 export PATH="/home/lilisette/.turso:$PATH"
+
