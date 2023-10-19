@@ -28,6 +28,7 @@ case ":$PATH:" in
 esac
 # pnpm end
 alias p=pnpm
+alias lsd="ls -1"
 
 # bun completions
 [ -s "/home/lilisette/.bun/_bun" ] && source "/home/lilisette/.bun/_bun"
