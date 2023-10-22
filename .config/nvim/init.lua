@@ -97,22 +97,3 @@ require('ayu').setup({
 
 require("ayu").colorscheme()
 
--- nvim options
-local options = { 
-	tabstop = 2, -- tabbed lines will appear indented by this many characters expandtab = true,
-	shiftwidth = 2, -- number of spaces inserted for each tab/indent
-	number = true, -- turn on line numbers
-	relativenumber = true, -- relative line numbers
-	splitbelow = true, -- new windows are created above
-	splitright = true, -- new windows are created to the left
-	scrolloff = 8, -- minimum visible lines above/below
-	ignorecase = true,
-	smartcase = true, -- ignore case if only lower case is used (only used when ignorecase is on)
-	hlsearch = true, -- highlight all matches on previous search pattern
-	breakindent = true, -- wrapped lines continue with the same indent
-	-- completeopt = { "menuone", "noselect", }, -- use the same menu when one or more options available, don't select by default
-}
-
-for k, v in pairs(options) do
-	vim.opt[k] = v
-end
