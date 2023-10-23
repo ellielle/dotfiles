@@ -33,7 +33,10 @@ alias p=pnpm
 alias lsd="ls -1"
 alias vim=nvim
 alias v=nvim
+# quick vim aliases while working on config
 alias vimtest="nvim --startuptime startup.log -c exit && tail -5 startup.log"
+alias vimdeleteeverything="rm -rf ~/.config/nvim && rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
+alias vimcopyconfig="cp -r ~/.dotfiles/config/nvim ~/.config/"
 
 # bun completions
 [ -s "/home/lilisette/.bun/_bun" ] && source "/home/lilisette/.bun/_bun"

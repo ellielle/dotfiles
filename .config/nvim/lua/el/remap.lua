@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- Toggle nvimtree
-vim.keymap.set("n", "<leader>pv", ":Neotree<CR>")
+vim.keymap.set("n", "<leader>vv", ":NvimTreeToggle<CR>")
 
 -- undotree toggle
 vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")
