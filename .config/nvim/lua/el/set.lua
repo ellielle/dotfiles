@@ -20,7 +20,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true -- ignore case if only lower case is used (only used when ignorecase is on)
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.breakindent = true -- wrapped lines continue with the same indent
--- vim.opt.completeopt = { "menuone", "noselect", } -- use the same menu when one or more options available, don't select by default
+vim.opt.completeopt = { "menuone", "noselect", } -- use the same menu when one or more options available, don't select by default
 
 vim.opt.swapfile = false
 vim.opt.backup = false

@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
---   Bring up netrw directory
-vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
+-- Toggle nvimtree
+vim.keymap.set("n", "<leader>pv", ":Neotree<CR>")
 
 -- undotree toggle
 vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")
@@ -45,7 +45,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Binding to format 
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>;", vim.lsp.buf.format)
 
 -- Quickfix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")

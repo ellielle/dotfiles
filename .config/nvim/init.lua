@@ -1,7 +1,7 @@
 -- remaps
 require("el")
 
--- install lazy.nvim if not already installed
+-- clone lazy.nvim if doesn't already exist
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -37,57 +37,80 @@ require("lazy").setup({
 		config = function ()
 			local configs = require("nvim-treesitter.configs")
 
-			configs.setup({
-				ensure_installed = { "lua", "vim", "vimdoc", "query", "html", "javascript", "typescript", "css", "vue", "svelte", "tsx", "json", "bash" },
-				sync_install = false,
-				auto_install = true,
-				highlight = {
-					enable = true,
-					additional_vim_regex_highlighting = false,
-				},
-				indent = { enable = true },
-			})
-		end
-	},
-	{
-		-- mark files and easily move between them
-		'theprimeagen/harpoon',
-		lazy = false,
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = true,
-		keys = {
-			{ "<leader>a", "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "Mark file with harpoon" },
-			{ "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", desc = "Go to next harpoon mark" },
-			{ "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "Go to previous harpoon mark" },
-			{ "<C-e>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Show harpoon marks" },
-		},
-	},
-	{
-		-- oopsie tree
-		"mbbill/undotree",
-		keys = {
-			{	"<leader>u", vim.cmd.UndotreeToggle, desc = "Toggle undotree"	},
-			{ "<leader>fu", vim.cmd.UndotreeFocus, desc = "Focus undotree" },
-		},
-	},
-	{
-		-- git fun in vim
-		"tpope/vim-fugitive",
-	},
-	{
-		-- lsp-zero 
-		{'williamboman/mason.nvim'},
-		{'williamboman/mason-lspconfig.nvim'},
-		{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-		-- LSP support
-		{'neovim/nvim-lspconfig'},
-		-- Autocompletion
-		{'hrsh7th/nvim-cmp'},
-		{'L3MON4D3/LuaSnip'},
-		{'hrsh7th/cmp-nvim-lsp'},
-	},
+      configs.setup({
+        ensure_installed = { "lua", "vim", "vimdoc", "query", "html", "javascript", "typescript", "css", "vue", "svelte", "tsx", "json", "bash" },
+        sync_install = false,
+        auto_install = true,
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+        indent = { enable = true },
+      })
+    end
+  },
+  {
+    -- mark files and easily move between them
+    'theprimeagen/harpoon',
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = true,
+    keys = {
+      { "<leader>a", "<cmd>lua require('harpoon.mark').add_file()<cr>", desc = "Mark file with harpoon" },
+      { "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>", desc = "Go to next harpoon mark" },
+      { "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", desc = "Go to previous harpoon mark" },
+      { "<leader>he", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Show harpoon marks" },
+    },
+  },
+  {
+    -- oopsie tree
+    "mbbill/undotree",
+    keys = {
+      {	"<leader>u", vim.cmd.UndotreeToggle, desc = "Toggle undotree"	},
+      { "<leader>fu", vim.cmd.UndotreeFocus, desc = "Focus undotree" },
+    },
+  },
+  {
+    -- git fun in vim
+    "tpope/vim-fugitive",
+  },
+  {
+    -- lsp-zero 
+    {'williamboman/mason.nvim'},
+    {'williamboman/mason-lspconfig.nvim'},
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+    -- LSP support
+    {'neovim/nvim-lspconfig'},
+    -- Autocompletion
+    {'hrsh7th/nvim-cmp'},
+    {'L3MON4D3/LuaSnip'},
+    {'hrsh7th/cmp-nvim-lsp'},
+  },
+  --  {
+  --    "nvim-tree/nvim-tree.lua",
+  --    version = "*",
+  --    lazy = false,
+  --    dependencies = {
+  --      "nvim-tree/nvim-web-devicons"
+  --    },
+  --   config = function()
+  --      require("nvim-tree").setup {}
+  --    end
+  --  },
+  --  {
+  --    "nvim-tree/nvim-web-devicons"
+  --  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
+  },
 })
 
 -- colorscheme setup
