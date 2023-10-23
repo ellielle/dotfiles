@@ -1,12 +1,18 @@
 vim.g.mapleader = " "
 
+-- Tab control
+vim.keymap.set("n", "<leader>tt", ":tabnew<CR>")
+vim.keymap.set("n", "<leader>tn", ":tabn<CR>")
+vim.keymap.set("n", "<leader>tp", ":tabp<CR>")
+vim.keymap.set("n", "<leader>td", ":tabc<CR>")
+
 -- Toggle nvimtree
 vim.keymap.set("n", "<leader>vv", ":NvimTreeToggle<CR>")
 
 -- undotree toggle
 vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")
 
--- Allows shifting highlighted text up and down in visual mode 
+-- Allows shifting highlighted text up and down in visual mode
 -- fails when trying to move beyond first or last line in buffer
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -28,7 +34,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [[\"_dP]])
 
 -- Yanks into the system clipboard
-vim.keymap.set({"n", "v"}, "<leader>y", [[\"+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [[\"+y]])
 vim.keymap.set("n", "<leader>Y", [[\"+Y]])
 
 -- Delete into _ register
@@ -43,7 +49,7 @@ vim.keymap.set("n", "Q", "<nop>")
 
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
--- Binding to format 
+-- Binding to format
 vim.keymap.set("n", "<leader>;", vim.lsp.buf.format)
 
 -- Quickfix navigation
@@ -57,4 +63,3 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- Shortcut to make file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-

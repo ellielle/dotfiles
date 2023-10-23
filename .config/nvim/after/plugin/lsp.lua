@@ -57,7 +57,7 @@ require("mason-lspconfig").setup({
 })
 
 local cmp = require("cmp")
-local cmp_action = require("lsp-zero").cmp_action()
+-- local cmp_action = require("lsp-zero").cmp_action()
 
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
@@ -67,8 +67,8 @@ cmp.setup({
     ["<CR>"] = cmp.mapping.confirm({ select = true }),
 
     -- move between completions
-    ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
-    ["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+    ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+    ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
 
     -- ctrl+space to trigger completion menu
     ["<C-Space>"] = cmp.mapping.complete(),
