@@ -27,8 +27,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# aliases
 alias p=pnpm
 alias lsd="ls -1"
+alias vim=nvim
+alias v=nvim
+alias vimtest="nvim --startuptime startup.log -c exit && tail -5 startup.log"
 
 # bun completions
 [ -s "/home/lilisette/.bun/_bun" ] && source "/home/lilisette/.bun/_bun"
