@@ -104,6 +104,19 @@ require("lazy").setup({
   {
     "nvim-tree/nvim-web-devicons"
   },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {}
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    opts = {}
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { 'nvim-tree/nvim-web-devicons' }
+  }
   --{
   --  "nvim-neo-tree/neo-tree.nvim",
   --  branch = "v3.x",
@@ -134,3 +147,23 @@ require('ayu').setup({
 })
 
 require("ayu").colorscheme()
+
+require("nvim-ts-autotag").setup()
+
+require("lualine").setup({
+  options = {
+    theme = "ayu_mirage"
+  }
+})
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
+    underline = true,
+    virtual_text = {
+      spacing = 5,
+      severity_limit = "Warning",
+    },
+    update_in_insert = true,
+  }
+)
