@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>tp", ":tabp<CR>")
 vim.keymap.set("n", "<leader>td", ":tabc<CR>")
 
 -- Toggle nvimtree
-vim.keymap.set("n", "<leader>vv", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>vv", ":Ex<CR>")
 
 -- undotree toggle
 vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")

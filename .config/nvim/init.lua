@@ -91,17 +91,6 @@ require("lazy").setup({
     { 'hrsh7th/cmp-nvim-lsp' },
   },
   {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    lazy = false,
-    dependencies = {
-      "nvim-tree/nvim-web-devicons"
-    },
-    config = function()
-      require("nvim-tree").setup {}
-    end
-  },
-  {
     "nvim-tree/nvim-web-devicons"
   },
   {
@@ -143,15 +132,63 @@ require("lazy").setup({
       })
     end
   },
-  --{
-  --  "nvim-neo-tree/neo-tree.nvim",
-  --  branch = "v3.x",
-  --  dependencies = {
-  --    "nvim-lua/plenary.nvim",
-  --    "nvim-tree/nvim-web-devicons",
-  --    "MunifTanjim/nui.nvim",
+  --  {
+  --    "nvim-tree/nvim-tree.lua",
+  --    version = "*",
+  --    lazy = false,
+  --    dependencies = {
+  --      "nvim-tree/nvim-web-devicons"
+  --    },
+  --    config = function()
+  --      require("nvim-tree").setup {}
+  --    end
   --  },
-  -- }
+  --  {
+  --    "nvim-neo-tree/neo-tree.nvim",
+  --    branch = "v3.x",
+  --    dependencies = {
+  --      "nvim-lua/plenary.nvim",
+  --      "nvim-tree/nvim-web-devicons",
+  --      "MunifTanjim/nui.nvim",
+  --      {
+  --        's1n7ax/nvim-window-picker',
+  --        version = '2.*',
+  --        config = function()
+  --          require("window-picker").setup({
+  --            filter_rules = {
+  --              include_current_win = false,
+  --              autoselecto_one = true,
+  --              bo = {
+  --                filetype = { "neo-tree", "neo-tree-popup", "notify" },
+  --                buftype = { "terminal", "quickfix" },
+  --              },
+  --            },
+  --          })
+  --        end,
+  --      },
+  --      config = function()
+  --        require("neo-tree").setup({
+  --          close_if_last_window = false,
+  --          popup_border_style = "rounded",
+  --          enable_git_status = true,
+  --          enable_diagnostics = true,
+  --          enable_normal_mode_for_inputs = false,
+  --
+  --          filesystem = {
+  --            filtered_items = {
+  --              visible = true,
+  --              hide_gitignored = true,
+  --              hide_dotfiles = true,
+  --              hide_by_name = {
+  --                ""
+  --              },
+  --            },
+  --          },
+  --          hijack_netrw_behavior = "open_current",
+  --        })
+  --      end
+  --    },
+  --  },
   --{
   --  "alexghergh/nvim-tmux-navigation",
   --  config = function()
