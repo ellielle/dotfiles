@@ -63,7 +63,7 @@ require("lazy").setup({
       { "<leader>a",  "<cmd>lua require('harpoon.mark').add_file()<cr>",        desc = "Mark file with harpoon" },
       { "<leader>hn", "<cmd>lua require('harpoon.ui').nav_next()<cr>",          desc = "Go to next harpoon mark" },
       { "<leader>hp", "<cmd>lua require('harpoon.ui').nav_prev()<cr>",          desc = "Go to previous harpoon mark" },
-      { "<leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Show harpoon marks" },
+      { "<leader>he", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Show harpoon marks" },
     },
   },
   {
@@ -116,7 +116,33 @@ require("lazy").setup({
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { 'nvim-tree/nvim-web-devicons' }
-  }
+  },
+  {
+    "elentok/format-on-save.nvim",
+    config = function()
+      local format_on_save = require("format-on-save")
+      local formatters = require("format-on-save.formatters")
+
+      format_on_save.setup({
+        exclude_path_patterns = {
+          "/node_modules/",
+          "./local/share/nvim/lazy"
+        },
+        formatter_by_ft = {
+          css = formatters.prettierd,
+          html = formatters.prettierd,
+          javascript = formatters.prettierd,
+          json = formatters.prettierd,
+          lua = formatters.lsp,
+          markdown = formatters.prettierd,
+          scss = formatters.prettierd,
+          typescript = formatters.prettierd,
+          typescriptreact = formatters.prettierd,
+          yaml = formatters.lsp,
+        }
+      })
+    end
+  },
   --{
   --  "nvim-neo-tree/neo-tree.nvim",
   --  branch = "v3.x",

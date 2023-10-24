@@ -50,7 +50,8 @@ vim.keymap.set("n", "Q", "<nop>")
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- Binding to format
-vim.keymap.set("n", "<leader>;", vim.lsp.buf.format)
+-- vim.keymap.set("n", "<leader>;", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>;", "<cmd>lua require('format-on-save').format()<CR>")
 
 -- Quickfix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
