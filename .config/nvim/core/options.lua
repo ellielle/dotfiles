@@ -1,3 +1,7 @@
+-- disable netrw first thing for nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_newtwPlugin = 1
+
 vim.opt.tabstop = 2 -- tabbed lines will appear indented by this many characters
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
