@@ -3,10 +3,10 @@ require("core.options")
 local keymaps = require("core.keymaps")
 
 keymaps.init() -- initialize and load general keymaps
-keymaps.plugins() -- load plugin-based keymaps
+keymaps.plugins_keymaps() -- load plugin-based keymaps
 
-require("core.lazy")
-require("core.colorscheme")
+require("core.lazy") -- load lazy.nvim package manager
+require("core.colorscheme") -- set colorscheme
 
 -- fix errors not clearing in some cases with TS
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {

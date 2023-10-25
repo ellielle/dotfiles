@@ -113,6 +113,6 @@ end
 -- return keymap modules
 return {
 	init = init,
-	plugins = plugins_keymaps,
+	plugins_keymaps = plugins_keymaps,
 	lsp_keymaps = lsp_keymaps,
 }

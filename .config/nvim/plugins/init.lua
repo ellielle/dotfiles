@@ -98,10 +98,11 @@ return {
 		},
 	},
 
-	{
-		-- lsp-zero
-		{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
-	},
+--	{
+--		-- lsp-zero
+--		{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
+--	},
+
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
