@@ -66,7 +66,7 @@ cmp.setup({
 
     -- move between completions
     ["<Tab>"] = cmp.mapping.select_next_item(cmp_select),
-    ["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+    ["<C-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
 
     -- ctrl+space to trigger completion menu
     ["<C-Space>"] = cmp.mapping.complete(),

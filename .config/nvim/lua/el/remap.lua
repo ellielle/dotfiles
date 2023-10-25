@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
-
 -- Tab control
 vim.keymap.set("n", "<leader>tt", ":tabnew<CR>")
 vim.keymap.set("n", "<leader>tn", ":tabn<CR>")
@@ -7,7 +6,7 @@ vim.keymap.set("n", "<leader>tp", ":tabp<CR>")
 vim.keymap.set("n", "<leader>td", ":tabc<CR>")
 
 -- Toggle nvimtree
-vim.keymap.set("n", "<leader>fe", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>")
 
 -- undotree toggle
 vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>")
