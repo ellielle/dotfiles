@@ -37,8 +37,8 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [[\"+y]])
 vim.keymap.set("n", "<leader>Y", [[\"+Y]])
 
 -- Delete into _ register
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
 
 -- A hack around the differences between C-c vs Esc with vertical edit mode
 vim.keymap.set("i", "<C-c>", "<Esc>")
