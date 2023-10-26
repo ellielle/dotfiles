@@ -1,6 +1,6 @@
 -- colorscheme setup
 require("ayu").setup({
-	mirage = true,
+  mirage = true,
 })
 
 require("ayu").colorscheme()
