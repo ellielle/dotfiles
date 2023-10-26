@@ -7,6 +7,11 @@ end
 
 -- configure treesitter
 treesitter.setup({
+  -- enable context commentstring plugin
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
 	-- ensure language parsers are installed
 	ensure_installed = {
 		"lua",

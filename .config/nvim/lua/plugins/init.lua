@@ -13,8 +13,9 @@ return {
 	{
 		-- highlighting for installed languages
 		"nvim-treesitter/nvim-treesitter",
+		event = { "BufReadPre", "BufNewFile" },
 		build = function()
-			local ts_update = require("nvim-treesitter.install")
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
 		end,
 		config = function()
@@ -82,7 +83,8 @@ return {
 			require("plugins.config.lsp.mason")
 		end,
 		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
+			"williamboman/mason-lspconfig.nvim", -- bridges gap between mason & lspconfig
+			"WhoIsSethDaniel/mason-tool-installer.nvim", -- sets up automatic installs for Mason
 		},
 	},
 
@@ -98,10 +100,10 @@ return {
 		},
 	},
 
---	{
---		-- lsp-zero
---		{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
---	},
+	--	{
+	--		-- lsp-zero
+	--		{ "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },
+	--	},
 
 	{
 		"windwp/nvim-autopairs",

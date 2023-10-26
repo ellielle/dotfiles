@@ -1,9 +1,9 @@
 -- colorscheme setup
 
--- require("ayu").setup({
---	mirage = true,
--- })
+require("ayu").setup({
+	mirage = true,
+})
 
--- require("ayu").colorscheme()
+require("ayu").colorscheme()
 
--- vim.cmd.colorscheme("ayu-mirage")
+vim.cmd.colorscheme("ayu-mirage")

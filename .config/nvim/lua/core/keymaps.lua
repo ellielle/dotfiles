@@ -1,5 +1,13 @@
 vim.g.mapleader = " "
 
+-- safely import telescope for keymaps
+-- local telescope_status, telescope = pcall(require, "telescope")
+-- if not telescope_status then
+-- print("telescope failed to load")
+-- return
+-- end
+
+
 local init = function()
 	-- Tab control
 	vim.keymap.set("n", "<leader>tt", ":tabnew<CR>")
@@ -71,7 +79,12 @@ local plugins_keymaps = function()
 	-- fugitive
 	vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
-	-- telescope keymaps located in plugins/config/telescope.lua
+	-- telescope keymaps
+--	vim.keymap.set("n", "<leader>ff", telescope.find_files, {})
+--	vim.keymap.set("n", "<C-p>", telescope.git_files, {})
+--	vim.keymap.set("n", "<leader>fs", function()
+--		telescope.grep_string({ search = vim.fn.input("grep > ") })
+--	end)
 end
 
 -- LSP keymaps, only on when LSP is enabled

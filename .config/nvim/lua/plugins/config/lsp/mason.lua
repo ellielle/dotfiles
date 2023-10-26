@@ -24,7 +24,6 @@ mason_lspconfig.setup({
 		"lua_ls",
 		"svelte",
 		"bashls",
-		"marksman",
 		"jsonls",
 		"tailwindcss",
 	},
