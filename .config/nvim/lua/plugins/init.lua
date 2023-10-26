@@ -135,15 +135,14 @@ return {
 
   -- colorschemes
   {
-    "shatur/neovim-ayu",
+    'AlexvZyl/nordic.nvim',
     lazy = false,
-  },
+    priority = 1000,
+    config = function()
+      require("nordic").load()
+    end
+  }
 
-  --	{
-  --		"pmizio/typescript-tools.nvim",
-  --		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-  --		opts = {},
-  --	},
   --  {
   --    "nvim-neo-tree/neo-tree.nvim",
   --    branch = "v3.x",
@@ -191,6 +190,7 @@ return {
   --    },
   --  },
   --{
+
   --  "alexghergh/nvim-tmux-navigation",
   --  config = function()
   --    local nvim_tmux_nav = require("nvim-tmux-navigation")

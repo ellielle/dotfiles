@@ -5,8 +5,8 @@ if not status then
   return
 end
 
-require("lualine").setup({
+lualine.setup({
   options = {
-    theme = "ayu_mirage",
+    theme = "nordic",
   },
 })
