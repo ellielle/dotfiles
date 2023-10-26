@@ -1,7 +1,7 @@
 -- import mason plugin safely
 local mason_status, mason = pcall(require, "mason")
 if not mason_status then
-	print("mason did not load")
+	print("mason failed to load")
 	return
 end
 
@@ -11,7 +11,7 @@ mason.setup()
 -- import mason-lspconfig plugin safely
 local mason_lsp_config_status, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not mason_lsp_config_status then
-	print("mason-lspconfig did not load")
+	print("mason-lspconfig failed to load")
 	return
 end
 
@@ -35,7 +35,7 @@ mason_lspconfig.setup({
 -- import mason-tool-installer plugin safely
 local mason_tool_installer_status, mason_tool_installer = pcall(require, "mason-tool-installer")
 if not mason_tool_installer_status then
-	print("mason-tool-installer did not load")
+	print("mason-tool-installer failed to load")
 	return
 end
 
