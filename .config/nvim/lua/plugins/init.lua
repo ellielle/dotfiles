@@ -28,6 +28,15 @@ return {
   },
 
   {
+    -- oopsie tree
+    "mbbill/undotree",
+    keys = {
+      { "<leader>u",  vim.cmd.UndotreeToggle, desc = "Toggle undotree" },
+      { "<leader>fu", vim.cmd.UndotreeFocus,  desc = "Focus undotree" },
+    },
+  },
+
+  {
     -- mark files and easily move between them
     "ThePrimeagen/harpoon",
     lazy = false,
@@ -48,15 +57,6 @@ return {
         desc = "Go to previous harpoon mark",
       },
       { "<leader>he", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", desc = "Show harpoon marks" },
-    },
-  },
-
-  {
-    -- oopsie tree
-    "mbbill/undotree",
-    keys = {
-      { "<leader>u",  vim.cmd.UndotreeToggle, desc = "Toggle undotree" },
-      { "<leader>fu", vim.cmd.UndotreeFocus,  desc = "Focus undotree" },
     },
   },
 
@@ -96,7 +96,10 @@ return {
     end,
     dependencies = {
       "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",           -- for autocompletion
       "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",                   -- source for file system paths
+      "hrsh7th/cmp-nvim-lsp-signature-help" -- function parameter hints
     },
   },
 
