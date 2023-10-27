@@ -42,7 +42,7 @@ local init = function()
   -- pls go away Q
   vim.keymap.set("n", "Q", "<nop>")
 
-  -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+  vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
   -- Formatting
   vim.keymap.set("n", "<leader>;", vim.lsp.buf.format)
@@ -58,7 +58,7 @@ end
 local plugins_keymaps = function()
   -- nvim-tree
   vim.keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>") -- Toggle nvimtree
-  vim.keymap.set("n", "<leader>ef", ":NvimTreeFocus<CR>") -- Toggle nvimtree
+  vim.keymap.set("n", "<leader>ef", ":NvimTreeFocus<CR>")  -- Toggle nvimtree
 
   -- undotree
   vim.keymap.set("n", "<leader>u", ":UndotreeShow<CR>") -- undotree toggle
