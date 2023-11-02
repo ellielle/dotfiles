@@ -34,10 +34,8 @@ alias lsd="ls -1"
 alias vim=nvim
 alias v=nvim
 # quick vim aliases while working on config
-alias vimtest="nvim --startuptime startup.log -c exit && tail -5 startup.log"
-alias vimdeleteeverything="rm -rf ~/.config/nvim && rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
-alias vimcopyconfig="cp -rv ~/.dotfiles/nvim/.config/nvim ~/.config/"
-alias vimconfigtogit="rm -rf ~/.dotfiles/nvim/.config/nvim && cp -rv ~/.config/nvim ~/.dotfiles/nvim/.config/"
+alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.log"
+alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 
 # bun completions
 [ -s "/home/lilisette/.bun/_bun" ] && source "/home/lilisette/.bun/_bun"
