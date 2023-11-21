@@ -33,6 +33,7 @@ alias p=pnpm
 alias lsd="ls -1"
 alias vim=nvim
 alias v=nvim
+alias py=python3
 # quick vim aliases while working on config
 alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.log"
 alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
@@ -50,3 +51,11 @@ export PATH="/home/lilisette/.turso:$PATH"
 # Golang
 export PATH=$PATH:/usr/local/go/bin
 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# added by Webi for pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
