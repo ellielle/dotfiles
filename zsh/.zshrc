@@ -6,7 +6,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
 # End of lines configured by zsh-newuser-install
-plugins=(git nvm alias-finder aliases git-prompt zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git nvm aliases git-prompt zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 # The following lines were added by compinstall
@@ -45,6 +45,10 @@ alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# deno
+export DENO_INSTALL="/home/lilisette/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+  
 # Turso
 export PATH="/home/lilisette/.turso:$PATH"
 
