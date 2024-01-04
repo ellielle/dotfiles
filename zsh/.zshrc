@@ -48,6 +48,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # deno
 export DENO_INSTALL="/home/lilisette/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# wsl browser symlink path
+export BROWSER=~/symlink-browser/firefox.exe
   
 # Turso
 export PATH="/home/lilisette/.turso:$PATH"
