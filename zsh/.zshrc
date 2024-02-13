@@ -30,7 +30,6 @@ esac
 
 # aliases
 alias p=pnpm
-alias lsd="ls -1"
 alias vim=nvim
 alias v=nvim
 alias py=python3
