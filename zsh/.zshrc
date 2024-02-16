@@ -10,7 +10,7 @@ plugins=(git nvm aliases git-prompt zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/lilisette/.zshrc'
+zstyle :compinstall filename '/home/lily/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -38,21 +38,21 @@ alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.
 alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 
 # bun completions
-[ -s "/home/lilisette/.bun/_bun" ] && source "/home/lilisette/.bun/_bun"
+[ -s "/home/lily/.bun/_bun" ] && source "/home/lily/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # deno
-export DENO_INSTALL="/home/lilisette/.deno"
+export DENO_INSTALL="/home/lily/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # wsl browser symlink path
-export BROWSER=~/symlink-browser/firefox.exe
+export BROWSER=wslview
   
 # Turso
-export PATH="/home/lilisette/.turso:$PATH"
+export PATH="/home/lily/.turso:$PATH"
 
 # Golang
 export PATH="$PATH:/usr/local/go/bin"
