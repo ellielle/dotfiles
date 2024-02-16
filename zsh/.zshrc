@@ -55,7 +55,10 @@ export BROWSER=~/symlink-browser/firefox.exe
 export PATH="/home/lilisette/.turso:$PATH"
 
 # Golang
-export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:/usr/local/go/bin"
+
+# neovim
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
