@@ -56,6 +56,7 @@ export PATH="/home/lily/.turso:$PATH"
 
 # Golang
 export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$HOME/go/bin"
 
 # neovim
 export PATH="$PATH:/opt/nvim-linux64/bin"
