@@ -30,9 +30,10 @@ esac
 
 # aliases
 alias p=pnpm
-alias vim=nvim
 alias v=nvim
 alias py=python3
+alias ls=lsd
+alias notes="v ~/vault"
 # quick vim aliases while working on config
 alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.log"
 alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
@@ -44,15 +45,8 @@ alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# deno
-export DENO_INSTALL="/home/lily/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
-# wsl browser symlink path
+# wsl browser set to wslview tool
 export BROWSER=wslview
-  
-# Turso
-export PATH="/home/lily/.turso:$PATH"
 
 # Golang
 export PATH="$PATH:/usr/local/go/bin"
