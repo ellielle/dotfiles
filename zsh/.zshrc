@@ -29,14 +29,15 @@ esac
 # pnpm end
 
 # aliases
-alias p=pnpm
-alias v=nvim
 alias py=python3
 alias ls=lsd
+alias lst="lsd --tree"
 alias notes="v ~/vault"
 # quick vim aliases while working on config
 alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.log"
 alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
+# watch go project directory for changes and run 'go test ./' 
+alias goautotest="watchexec -c clear -o do-nothing -d 100ms --exts go 'pkg=\"./...\"; echo \"running tests for \$pkg\"; go test \"\$pkg\"'"
 
 # bun completions
 [ -s "/home/lily/.bun/_bun" ] && source "/home/lily/.bun/_bun"
