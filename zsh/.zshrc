@@ -32,7 +32,7 @@ esac
 alias py=python3
 alias ls=lsd
 alias lst="lsd --tree"
-alias notes="v ~/vault"
+alias notes="nvim ~/vault"
 # quick vim aliases while working on config
 alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.log"
 alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
