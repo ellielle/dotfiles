@@ -53,8 +53,9 @@ export BROWSER=wslview
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/go/bin"
 
-# neovim
-export PATH="$PATH:/opt/nvim-linux64/bin"
+# bob's your neovim uncle
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
+
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
