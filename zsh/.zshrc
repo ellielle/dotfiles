@@ -32,7 +32,8 @@ esac
 alias py=python3
 alias ls=lsd
 alias lst="lsd --tree"
-alias notes="nvim ~/vault"
+alias lg="lazygit"
+alias gl="git --no-pager log --oneline --decorate --graph --parents"
 # quick vim aliases while working on config
 alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.log"
 alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
@@ -66,3 +67,6 @@ eval "$(pyenv virtualenv-init -)"
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Turso
+export PATH="/home/lily/.turso:$PATH"
