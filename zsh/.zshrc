@@ -30,9 +30,7 @@ esac
 
 # aliases
 alias py=python3
-alias ls=lsd
 alias lst="lsd --tree"
-alias lg="lazygit"
 alias gl="git --no-pager log --oneline --decorate --graph --parents"
 # quick vim aliases while working on config
 alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.log"
