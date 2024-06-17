@@ -31,7 +31,9 @@ esac
 # aliases
 alias py=python3
 alias lst="lsd --tree"
-alias gl="git --no-pager log --oneline --decorate --graph --parents"
+alias gl="git --no-pager log --oneline --decorate --graph"
+alias gst="git status"
+alias gc="git commit -S -m"
 # quick vim aliases while working on config
 alias vimteststartup="nvim --startuptime startup.log -c exit && tail -5 startup.log"
 alias vimclean="rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
