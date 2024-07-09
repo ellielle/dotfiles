@@ -16,12 +16,16 @@ gext install just-perfection-desktop@just-perfection
 gext install blur-my-shell@aunetx
 gext install space-bar@luchrioh
 gext install undecorate@sun.wxg@gmail.com
+gext install Vitals@CoreCoding.com
+gext install AlphabeticalAppGrid@stuarthayhurst
 
 # Compile gsettings schemas in order to be able to set them
 sudo cp ~/.local/share/gnome-shell/extensions/tactile@lundal.io/schemas/org.gnome.shell.extensions.tactile.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/just-perfection-desktop\@just-perfection/schemas/org.gnome.shell.extensions.just-perfection.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/blur-my-shell\@aunetx/schemas/org.gnome.shell.extensions.blur-my-shell.gschema.xml /usr/share/glib-2.0/schemas/
 sudo cp ~/.local/share/gnome-shell/extensions/space-bar\@luchrioh/schemas/org.gnome.shell.extensions.space-bar.gschema.xml /usr/share/glib-2.0/schemas/
+sudo cp ~/.local/share/gnome-shell/extensions/Vitals\@CoreCoding.com/schemas/org.gnome.shell.extensions.vitals.gschema.xml /usr/share/glib-2.0/schemas/
+sudo cp ~/.local/share/gnome-shell/extensions/AlphabeticalAppGrid\@stuarthayhurst/schemas/org.gnome.shell.extensions.AlphabeticalAppGrid.gschema.xml /usr/share/glib-2.0/schemas/
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 # Configure Tactile
@@ -66,3 +70,12 @@ gsettings set org.gnome.mutter center-new-windows true
 
 # Set Cascadia Mono as the default monospace font
 gsettings set org.gnome.desktop.interface monospace-font-name 'CaskaydiaMono Nerd Font 10'
+
+# Configure Vitals
+gsettings set org.gnome.shell.extensions.vitals hide-icons true
+gsettings set org.gnome.shell.extensions.vitals hot-sensors "['__network-rx_max__']"
+gsettings set org.gnome.shell.extensions.vitals icon-style 0
+gsettings set org.gnome.shell.extensions.vitals network-speed-format 1
+
+# Configure AlphabeticalAppGrid
+gsettings set org.gnome.shell.extensions.alphabetical-app-grid folder-order-position 'end'
