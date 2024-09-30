@@ -70,3 +70,20 @@ source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Turso
 export PATH="/home/lily/.turso:$PATH"
+
+# pomodoro using timer from https://github.com/caarlos0/timer
+declare -A pomo_options 
+pomo_options["work"]="45"
+pomo_options["break"]="10"
+pomo_options["tinker"]="20"
+
+pomodoro() {
+  clear
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+    val=$1
+    echo $val 
+    timer ${pomo_options["$val"]}m
+    spd-say "'$val' session done"
+  fi
+}
+
