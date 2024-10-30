@@ -131,6 +131,8 @@ export PATH="$PATH:/home/lily/.local/bin"
 # zoxide for a smarter cd tool
 eval "$(zoxide init bash)"
 
+# added by me because it throws a fit every time
+export PATH="$HOME/.pyenv/bin:$PATH"
 # added by Webi for pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
